@@ -1,3 +1,27 @@
+<script>
+  const timer = () => {
+    const startTime = new Date().getTime();
+
+    const setTime = () => {
+      const endTime = new Date().getTime();
+      const passedTime = endTime - startTime;
+      const min = Math.floor((passedTime / (1000 * 60)) % 60)
+        .toString()
+        .padStart(2, "0");
+      const sec = Math.floor((passedTime / 1000) % 60)
+        .toString()
+        .padStart(2, "0");
+
+      const puzzleTimer = document.querySelector(".puzzle-timer");
+      puzzleTimer.textContent = `${min}:${sec}`;
+    };
+
+    setInterval(setTime, 1000);
+  };
+
+  timer();
+</script>
+
 <form id="play-user-form">
   <div class="play-user">
     <label for="user" class="user-label">Name</label>
