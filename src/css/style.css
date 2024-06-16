@@ -10,7 +10,7 @@
   --btn-color: #ffc107;
   --main-text-color: #555;
   --input-bg-color: #f6f6f6;
-  --border-gray: #999;
+  --border-gray: 1px solid #999;
   --bg-color: #fefffb;
   /* 정답단어 */
   --red1: rgba(255, 07, 0, 0.4);
@@ -29,4 +29,8 @@ body {
   font-family: "NanumSquareRound";
   background-color: var(--main-color);
   color: var(--main-text-color);
+}
+
+body * {
+  font-family: "NanumSquareRound";
 }
