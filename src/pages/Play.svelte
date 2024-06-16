@@ -20,12 +20,33 @@
   };
 
   const handleStart = (e) => {
-    e.currentTarget.parentElement.style.display = "none";
     //name값이 입력됐는지 체크해야할듯
+    e.currentTarget.parentElement.style.display = "none";
+
+    // https://youtu.be/GMvv7RG7ulc?feature=shared&t=462
+    const randomAlphabet = () => {
+      const alphabets = document.querySelectorAll(".puzzle-alphabet");
+      alphabets.forEach(function (alphabet) {
+        if (alphabet.textContent != "") return;
+        let charCode = Math.round(65 + Math.random() * 25);
+        alphabet.textContent = String.fromCharCode(charCode);
+      });
+    };
+    randomAlphabet();
 
     // start 버튼 누르면 타이머 시작
     timer();
   };
+
+  // https://youtu.be/GMvv7RG7ulc?feature=shared&t=557
+  // const puzzleBlocks = document.querySelectorAll(".puzzle-alphabet");
+  // puzzleBlocks.forEach(function (puzzleBlock) {
+  //   puzzleBlock.addEventListener("click", function () {
+  //     puzzleBlock.classList.add("correct1");
+  //   });
+  // });
+
+  // window.addEventListener("load", randomAlphabet);
 </script>
 
 <form id="play-user-form">
@@ -39,21 +60,225 @@
 <div class="puzzle-wrap">
   <div class="puzzle-info-wrap">
     <div class="puzzle-info">
-      <span>제목</span>
+      <span>Room</span>
       <span class="puzzle-timer">00:00</span>
     </div>
-    <div class="puzzle-desc">설명</div>
+    <div class="puzzle-desc">In my room.</div>
   </div>
   <div class="puzzle-play">
     <div class="puzzle-word-list">
-      {#each Array(10) as _, idx}
+      <!-- {#each Array(10) as _, idx}
         <span id="puzzle-word{idx}" class="puzzle-word">단어</span>
-      {/each}
+      {/each} -->
+      <span id="puzzle-word0" class="puzzle-word">desk</span>
+      <span id="puzzle-word1" class="puzzle-word">chair</span>
+      <span id="puzzle-word2" class="puzzle-word">bed</span>
+      <span id="puzzle-word3" class="puzzle-word">bookcase</span>
+      <span id="puzzle-word4" class="puzzle-word">closet</span>
+      <span id="puzzle-word5" class="puzzle-word">computer</span>
+      <span id="puzzle-word6" class="puzzle-word">keyboard</span>
+      <span id="puzzle-word7" class="puzzle-word">mouse</span>
+      <span id="puzzle-word8" class="puzzle-word">headset</span>
+      <span id="puzzle-word9" class="puzzle-word">fan</span>
     </div>
     <div class="puzzle-search">
-      {#each Array(168) as _, idx}
+      <!-- {#each Array(168) as _, idx}
         <span id="puzzle-alphabet{idx}" class="puzzle-alphabet">o</span>
-      {/each}
+      {/each} -->
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet">b</span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet">e</span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet">d</span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
+      <span class="puzzle-alphabet"></span>
     </div>
     <div class="puzzle-status-board">
       {#each Array(10) as _, idx}

@@ -90,11 +90,17 @@
   margin: 1.5vh 0;
   position: relative;
   width: auto;
-  text-decoration-line: line-through;
+  /* text-decoration-line: line-through; */
   text-decoration-thickness: 20%;
 }
 
-#puzzle-word0 {
+.cancel-line1 {
+  text-decoration-color: var(--red1);
+}
+.correct1 {
+  background: var(--red1);
+}
+/* #puzzle-word0 {
   text-decoration-color: var(--red1);
 }
 #puzzle-word1 {
@@ -123,7 +129,7 @@
 }
 #puzzle-word9 {
   text-decoration-color: var(--blue1);
-}
+} */
 
 /***************************************
 		게임판
@@ -143,6 +149,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  user-select: none;
 }
 
 /***************************************
