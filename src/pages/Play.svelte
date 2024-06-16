@@ -19,7 +19,13 @@
     setInterval(setTime, 1000);
   };
 
-  timer();
+  const handleStart = (e) => {
+    e.currentTarget.parentElement.style.display = "none";
+    //name값이 입력됐는지 체크해야할듯
+
+    // start 버튼 누르면 타이머 시작
+    timer();
+  };
 </script>
 
 <form id="play-user-form">
@@ -27,7 +33,7 @@
     <label for="user" class="user-label">Name</label>
     <input type="text" id="user" name="user" class="user-input" required />
   </div>
-  <button type="submit" class="start-btn">Start</button>
+  <button type="submit" class="start-btn" on:click={handleStart}>Start</button>
 </form>
 
 <div class="puzzle-wrap">
