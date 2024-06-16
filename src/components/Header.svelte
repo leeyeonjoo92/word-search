@@ -13,6 +13,6 @@
 <header>
   <a href="/" on:click={moveToHome}>Word Search Puzzles</a>
   <a href="#/maker" on:click={moveToMaker} class="header-icon"
-    >word search maker</a
+    >Word Search Maker</a
   >
 </header>
