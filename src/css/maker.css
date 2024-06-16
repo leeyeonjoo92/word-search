@@ -1,0 +1,57 @@
+/***************************************
+		퍼즐 생성
+ **************************************/
+#maker-form {
+  width: 90%;
+  margin: 10vh auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.maker-inputs {
+  margin: 3vh 0;
+}
+
+.maker-label {
+  display: block;
+  margin-bottom: 1vh;
+  color: var(--main-text-color);
+}
+
+.maker-input {
+  width: 100%;
+  border-radius: 0;
+  padding: 10px;
+  border: 1px solid var(--border-gray);
+  background-color: var(--input-bg-color);
+  font-size: 20px;
+}
+
+.maker-word {
+  width: 20%;
+}
+
+.maker-submit-btn {
+  margin-top: 5vh;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  width: 100%;
+  padding: 15px;
+  cursor: pointer;
+}
+
+/***************************************
+		퍼즐 업데이트 / 공유 링크
+ **************************************/
+.maker-updated-wrap {
+  width: 90%;
+  margin: 10vh auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.maker-updated-title {
+  font-size: 30px;
+	margin-bottom: 3vh;
+}
