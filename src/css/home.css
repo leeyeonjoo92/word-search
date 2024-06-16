@@ -1,0 +1,67 @@
+/***************************************
+		소개, maker 버튼
+ **************************************/
+.home {
+  width: 90%;
+  margin: 3vh auto;
+}
+.home-info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background: var(--bg-white);
+}
+
+.home-desc {
+  font-size: 18px;
+  line-height: 1.8;
+  padding: 5vh 2vw;
+}
+
+.home-desc-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.home-detail span {
+  font-weight: bold;
+  display: block;
+  margin: 1vh 0;
+}
+
+.home-desc p {
+  margin-bottom: 3vh;
+}
+
+.home-maker-btn {
+  background: var(--btn-color);
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/***************************************
+		퍼즐 목록
+ **************************************/
+.puzzle-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 3vh;
+}
+
+.play-btn {
+  width: 32%;
+  border: 4px solid var(--sub-color);
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+.play-btn-empty {
+  border: 4px solid #999;
+  color: #999;
+  cursor: not-allowed;
+}

@@ -2,6 +2,7 @@
 @import "header.css";
 @import "maker.css";
 @import "play.css";
+@import "home.css";
 @import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 
 :root {
@@ -12,6 +13,7 @@
   --input-bg-color: #f6f6f6;
   --border-gray: 1px solid #999;
   --bg-color: #fefffb;
+  --bg-white: #fffffe;
   /* 정답단어 */
   --red1: rgba(255, 07, 0, 0.4);
   --red2: rgba(255, 85, 130, 0.4);
