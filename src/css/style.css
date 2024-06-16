@@ -11,6 +11,18 @@
   --main-text-color: #555;
   --input-bg-color: #f6f6f6;
   --border-gray: #999;
+  --bg-color: #fefffb;
+  /* 정답단어 */
+  --red1: rgba(255, 07, 0, 0.4);
+  --red2: rgba(255, 85, 130, 0.4);
+  --red3: rgba(255, 69, 0, 0.4);
+  --green1: rgba(0, 255, 5, 0.4);
+  --green2: rgba(0, 255, 179, 0.4);
+  --green3: rgba(0, 255, 92, 0.4);
+  --purple1: rgba(202, 68, 245, 0.4);
+  --purple2: rgba(143, 69, 245, 0.4);
+  --purple3: rgba(85, 69, 245, 0.4);
+  --blue1: rgba(14, 198, 245, 0.4);
 }
 
 body {
