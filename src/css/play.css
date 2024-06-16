@@ -1,0 +1,182 @@
+/***************************************
+		유저입력, 시작버튼
+ **************************************/
+#play-user-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  background: var(--sub-color);
+  border-radius: 30px;
+  padding: 8vh 4vw;
+}
+
+.play-user {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.user-label {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+.user-input {
+  background: var(--input-bg-color);
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border: var(--border-gray);
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+.start-btn {
+  background: var(--btn-color);
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/***************************************
+		퍼즐 부분
+ **************************************/
+.puzzle-wrap {
+  width: 90%;
+  margin: 10vh auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/***************************************
+		제목, 설명, 타이머
+ **************************************/
+.puzzle-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.puzzle-info span:nth-of-type(1) {
+  margin-right: 1vw;
+}
+
+.puzzle-desc {
+  text-align: center;
+  margin-top: 2vh;
+  margin-bottom: 4vh;
+}
+
+/***************************************
+		단어 리스트
+ **************************************/
+.puzzle-play {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+}
+.puzzle-word-list {
+  width: 20%;
+  text-align: right;
+  font-size: 17px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.puzzle-word {
+  margin: 1.5vh 0;
+  position: relative;
+  width: auto;
+  text-decoration-line: line-through;
+  text-decoration-thickness: 20%;
+}
+
+#puzzle-word0 {
+  text-decoration-color: var(--red1);
+}
+#puzzle-word1 {
+  text-decoration-color: var(--red2);
+}
+#puzzle-word2 {
+  text-decoration-color: var(--red3);
+}
+#puzzle-word3 {
+  text-decoration-color: var(--green1);
+}
+#puzzle-word4 {
+  text-decoration-color: var(--green2);
+}
+#puzzle-word5 {
+  text-decoration-color: var(--green3);
+}
+#puzzle-word6 {
+  text-decoration-color: var(--purple1);
+}
+#puzzle-word7 {
+  text-decoration-color: var(--purple2);
+}
+#puzzle-word8 {
+  text-decoration-color: var(--purple3);
+}
+#puzzle-word9 {
+  text-decoration-color: var(--blue1);
+}
+
+/***************************************
+		게임판
+ **************************************/
+.puzzle-search {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.puzzle-alphabet {
+  width: 60px;
+  height: 60px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/***************************************
+		현황판
+ **************************************/
+.puzzle-status-board {
+  width: 20%;
+}
+.puzzle-status-user {
+  margin: 2.5vh 0;
+}
+.puzzle-status-ranking {
+  padding-left: 35px;
+}
+
+#puzzle-status-ranking0,
+#puzzle-status-ranking1,
+#puzzle-status-ranking2 {
+  position: relative;
+}
+#puzzle-status-ranking0::before,
+#puzzle-status-ranking1::before,
+#puzzle-status-ranking2::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#puzzle-status-ranking0::before {
+  content: "🥇";
+}
+#puzzle-status-ranking1::before {
+  content: "🥈";
+}
+#puzzle-status-ranking2::before {
+  content: "🥉";
+}
