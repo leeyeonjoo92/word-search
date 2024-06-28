@@ -1,4 +1,9 @@
 <script>
+  import { onMount } from "svelte";
+
+  /*----------------------------------------
+   *		타이머 함수
+   */
   const timer = () => {
     const startTime = new Date().getTime();
 
@@ -19,6 +24,9 @@
     setInterval(setTime, 1000);
   };
 
+  /*----------------------------------------
+   *		시작버튼 함수
+   */
   const handleStart = (e) => {
     //name값이 입력됐는지 체크해야할듯
     e.currentTarget.parentElement.style.display = "none";
@@ -32,30 +40,41 @@
         alphabet.textContent = String.fromCharCode(charCode);
       });
     };
-    randomAlphabet();
 
     // start 버튼 누르면 타이머 시작
     timer();
   };
 
-  // https://youtu.be/GMvv7RG7ulc?feature=shared&t=557
-  // const puzzleBlocks = document.querySelectorAll(".puzzle-alphabet");
-  // puzzleBlocks.forEach(function (puzzleBlock) {
-  //   puzzleBlock.addEventListener("click", function () {
-  //     puzzleBlock.classList.add("correct1");
-  //   });
-  // });
+  /*----------------------------------------
+   *		알파벳 랜덤 배치 함수
+   */
+  const randomAlphabet = () => {
+    const alphabets = document.querySelectorAll(".puzzle-alphabet");
+    alphabets.forEach(function (alphabet) {
+      if (alphabet.textContent != "") return;
+      let charCode = Math.round(65 + Math.random() * 25);
+      alphabet.textContent = String.fromCharCode(charCode);
 
-  // window.addEventListener("load", randomAlphabet);
+      alphabet.addEventListener("click", function (e) {
+        alphabet.classList.add("correct1");
+        console.log(alphabet);
+      });
+    });
+  };
+
+  // DOM에 마운트되는 즉시 실행
+  onMount(() => randomAlphabet());
+
+  // https://youtu.be/GMvv7RG7ulc?feature=shared&t=557
 </script>
 
-<form id="play-user-form">
+<!-- <form id="play-user-form">
   <div class="play-user">
     <label for="user" class="user-label">Name</label>
     <input type="text" id="user" name="user" class="user-input" required />
   </div>
   <button type="submit" class="start-btn" on:click={handleStart}>Start</button>
-</form>
+</form> -->
 
 <div class="puzzle-wrap">
   <div class="puzzle-info-wrap">

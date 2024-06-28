@@ -90,7 +90,7 @@
   margin: 1.5vh 0;
   position: relative;
   width: auto;
-  /* text-decoration-line: line-through; */
+  text-decoration-line: line-through;
   text-decoration-thickness: 20%;
 }
 
@@ -98,6 +98,16 @@
   text-decoration-color: var(--red1);
 }
 .correct1 {
+  position: relative;
+  color: #000;
+}
+.correct1::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 60px;
+  height: 60px;
   background: var(--red1);
 }
 /* #puzzle-word0 {
@@ -145,7 +155,7 @@
   width: 60px;
   height: 60px;
   background: var(--bg-color);
-  border: var(--border-gray);
+  border: var(--border-gray-light);
   display: flex;
   justify-content: center;
   align-items: center;
